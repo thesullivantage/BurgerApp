@@ -61,10 +61,11 @@ var orm = {
         queryString += objtoSql(objColVals);
         queryString += " WHERE ";
         queryString += condition
-
+        console.log(queryString)
         connection.query(queryString, function(err, result) {
             if (err) { throw err }
             cb (result);
+            console.log(result)
         });
     },
     delete: function(table, condition, cb) {

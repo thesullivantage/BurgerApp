@@ -1,11 +1,11 @@
-<h1>Cats!</h1>
+<h1>Burgers!</h1>
 
 <h2>Burgers on your plate</h2>
 
 <ul>
-  {{#each cats}}
-    {{#unless true}}
-      {{> burgers/burger-DEVOUREDblock devoured=false}}
+  {{#each burgers}}
+    {{#unless false}}
+      {{> burgers/burger-EATMEblock devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,8 +13,8 @@
 <h2>Burgers you have Eaten:</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if true}}
+  {{#each burgers}}
+    {{#if false}}
       {{> burgers/burger-DEVOUREDblock}}
     {{/if}}
   {{/each}}
@@ -28,5 +28,5 @@
     <input type="text" id="burger" name="name">
   </div>
 
-  <button type="submit">Add Cat</button>
+  <button type="submit">Add Burger</button>
 </form>
